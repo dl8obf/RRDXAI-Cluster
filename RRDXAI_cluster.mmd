@@ -1,0 +1,22 @@
+---
+title: RRDXAI-Cluster
+---
+flowchart TB
+    DX["DX-Cluster<br>DO1ABW oder DL2TT"] -. Interface A .-> LOG["RRDXA-Log<br>loogbook.rrdxa.org<br>DF7CB"]
+    DX -. Interface B / Telnet .-> N1MM["N1MM-Companion<br>DF1LX"] & AGG["Aggregierungsklient<br>(Skimmer und UDP-Pakete)<br>(noch zu entwickeln)
+    "]
+    DX -. Interface C .-> CHAT["RRDXA-Chat<br>(noch zu entwickeln)"]
+    DX -. Interface D / Telnet .-> BANDMAP["Bandmap<br>(noch zu entwickeln)"]
+    DX -. Interface E .-> SCORE["RRDXA-Scoreboard<br>(noch zu entwickeln)"]
+
+     DX:::do1abw
+     LOG:::df7cb
+     N1MM:::df1lx
+     CHAT:::geplant
+     AGG:::geplant
+     BANDMAP:::geplant
+     SCORE:::geplant
+    classDef do1abw fill:#d9eaf7,stroke:#3677a8,stroke-width:2px,color:#18354a
+    classDef df7cb fill:#dcefdc,stroke:#4d8b50,stroke-width:2px,color:#243d25
+    classDef df1lx fill:#fbe5d6,stroke:#c77735,stroke-width:2px,color:#4d301b
+    classDef geplant fill:#eeeeee,stroke:#999999,stroke-width:1.5px,color:#444444
